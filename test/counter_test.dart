@@ -30,6 +30,20 @@ void main() {
         expect(count, 1);
       },
     );
+    test(
+      "given the counter class when it is decremented then value of count should be -1",
+      () {
+        // Arrange
+        final counter = Counter();
+
+        // Act
+        counter.decrement();
+        final count = counter.count;
+
+        // Assert
+        expect(count, -1);
+      },
+    );
   });
   // Given when then pattern
 }
